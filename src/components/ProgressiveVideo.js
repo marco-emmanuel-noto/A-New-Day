@@ -1,7 +1,7 @@
 import React, {useState} from "react"
-import {Box} from "@chakra-ui/react"
+import {useMediaQuery, Box} from "@chakra-ui/react"
 import "./ProgressiveVideo.css";
-import {useMediaQuery} from "@chakra-ui/react"
+
 
 const ProgressiveVideo = (props) => {
     const [isVideoLoaded,

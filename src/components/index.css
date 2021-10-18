@@ -1,0 +1,41 @@
+.exp-gradient {
+    background-image: url("https://anewday.studio/wp-content/uploads/2021/01/ExperimentalGrading_02.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    font-family: Oswald, sans-serif !important;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+.main-header {
+    font-size: 260px;
+    letter-spacing: -2px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1em;
+    text-align: center;
+}
+
+.secondary-header {
+    font-size: 120px;
+    letter-spacing: -2px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1em;
+    text-align: center;
+}
