@@ -13,9 +13,6 @@ const IndexPage = () => {
     const header = "A new day"
     const subHeader = "A Berlin based creative studio with a thing for brand design";
 
-    const windowHeight = window.screen.height;
-    const checkpoint = windowHeight;
-
     // useEffect(() => {     window.addEventListener("scroll", () => {         const
     // currentScroll = window.scrollY;         let opacity;         if
     // (currentScroll <= checkpoint) {             opacity = 1 - currentScroll /
@@ -23,10 +20,28 @@ const IndexPage = () => {
     // .querySelector(".video-container")             .style .opacity = opacity; })
     // })
 
+    useEffect(() => {
+        const windowHeight = window.screen.height;
+        const checkpoint = windowHeight;
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.scrollY;
+            let opacity;
+            if (currentScroll > checkpoint) {
+                opacity = 0
+            } else {
+                opacity = 1;
+            }
+            document
+                .querySelector(".video-container")
+                .style
+                .opacity = opacity;
+        })
+    })
+
     return (
         <Box>
             <Box bg="#0F0D0F" position="fixed" top="0" left="0">
-                <Box opacity="1" className="video-container"><ProgressiveVideo
+                <Box className="video-container"><ProgressiveVideo
                     mobileVideo={HeroMobileVideo}
                     desktopVideo={HeroDesktopVideo}
                     mobileImage={LightHeroMobile}
@@ -38,7 +53,7 @@ const IndexPage = () => {
                 justifyContent="center"
                 alignItems="center"
                 position="relative"
-                top={windowHeight - 410}
+                top="calc(100vh - 260px)"
                 spacing="0">
 
                 <VStack
