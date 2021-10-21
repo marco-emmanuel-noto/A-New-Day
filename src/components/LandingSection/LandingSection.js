@@ -6,24 +6,32 @@ import AndButton from "../UI/AndButton";
 import Header from "../UI/Typography/Header";
 
 const LandingSection = (props) => {
-    
-    
 
     return (
-            <BgImage image={props.staticImage} style={{minWidth:"100vw"}}>
-                <Flex
-                    w="100wv"
-                    h="150vh"
-                    direction="column"
-                    justifyContent="center"
-                    alignItems="center">
-                    <VStack spacing="2rem">
-                        {props.header && <Header as="h2" children={props.header} size="140px" color="#0F0F0F"/>}
+        <BgImage
+            image={props.staticImage}
+            style={{
+            minWidth: "100vw"
+        }}>
+            <Flex
+                w="100wv"
+                h="150vh"
+                direction="column"
+                justifyContent="center"
+                alignItems="center">
+                <VStack spacing="2rem">
+                    {props.header && <Header
+                        as="h2"
+                        children={props.header}
+                        size={props.smallDevice
+                        ? "80px"
+                        : "140px"}
+                        color="#0F0F0F"/>}
 
-                        <AndButton bg={props.buttonColor} text={props.buttonText}/>
-                    </VStack>
-                </Flex>
-            </BgImage>
+                    <AndButton bg={props.buttonColor} text={props.buttonText}/>
+                </VStack>
+            </Flex>
+        </BgImage>
     );
 };
 

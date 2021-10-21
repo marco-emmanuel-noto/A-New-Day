@@ -11,8 +11,11 @@ import Shop from "../components/LandingSection/Shop"
 import GifClip from "../components/GifClip/GifClip"
 import About from "../components/LandingSection/About"
 import MainHeader from "../components/LandingSection/MainHeader"
+import {useBreakpoint} from "gatsby-plugin-breakpoints";
 
 const IndexPage = () => {
+
+    const breakpoints = useBreakpoint();
 
     useEffect(() => {
         const windowHeight = window.screen.height;
@@ -40,7 +43,8 @@ const IndexPage = () => {
                     desktopVideo={HeroDesktopVideo}
                     mobileImage={LightHeroMobile}
                     desktopImage={LightHeroDesktop}
-                    bgColour={"#0F0F0F"}/></Box>
+                    bgColour={"#0F0F0F"}
+                    smallDevice={breakpoints.sm}/></Box>
             </Box>
             <VStack
                 w="100vw"
@@ -50,11 +54,11 @@ const IndexPage = () => {
                 top="calc(100vh - 260px)"
                 spacing="0">
 
-               <MainHeader />
+                <MainHeader smallDevice={breakpoints.sm}/>
 
-                <Showoff/>
-                <About />
-                <Shop/>
+                <Showoff smallDevice={breakpoints.sm}/>
+                <About smallDevice={breakpoints.sm}/>
+                <Shop smallDevice={breakpoints.sm}/>
             </VStack>
 
         </Box>

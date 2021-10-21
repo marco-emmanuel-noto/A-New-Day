@@ -3,7 +3,7 @@ import {Flex, VStack} from "@chakra-ui/react"
 import AndButton from "../UI/AndButton";
 import Header from "../UI/Typography/Header";
 
-const About = () => {
+const About = (props) => {
 
     return (
         <Flex
@@ -17,7 +17,9 @@ const About = () => {
                 <Header
                     as="h2"
                     children="MAKING PEOPLE FALL IN LOVE."
-                    size="180px"
+                    size={props.smallDevice
+                    ? "80px"
+                    : "140px"}
                     color="#FFFFFF"
                     lineHeight="1.2"/>
                 <AndButton bg="#FFFFFF" text={"ABOUT A NEW DAY STUDIO"}/>

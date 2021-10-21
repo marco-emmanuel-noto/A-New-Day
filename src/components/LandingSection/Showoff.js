@@ -3,7 +3,7 @@ import {graphql, useStaticQuery} from 'gatsby';
 import {getImage} from 'gatsby-plugin-image';
 import LandingSection from "./LandingSection";
 
-const Showoff = () => {
+const Showoff = (props) => {
     const {placeholderImage} = useStaticQuery(graphql `
     query {
       placeholderImage: file(name: {eq: "showoff"}) {
@@ -23,7 +23,8 @@ const Showoff = () => {
         staticImage={showoffImage}
         header="SHOWOFF"
         buttonColor="#F6D6D6"
-        buttonText="HAVE A LOOK"/>);
+        buttonText="HAVE A LOOK"
+        smallDevice={props.smallDevice}/>);
 };
 
 export default Showoff

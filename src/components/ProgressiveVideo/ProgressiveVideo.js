@@ -1,7 +1,6 @@
 import React, {useState} from "react"
 import {Box} from "@chakra-ui/react"
 import "./ProgressiveVideo.css";
-import { useBreakpoint } from "gatsby-plugin-breakpoints";
 
 
 const ProgressiveVideo = (props) => {
@@ -13,13 +12,12 @@ const ProgressiveVideo = (props) => {
     };
 
 
-    const breakpoints = useBreakpoint();
-    console.log(breakpoints.sm)
+
 
     return (
-        <Box position="relative" overflow="hidden" w="100vw" h="100vh" bg={props.bgColour}>
+        <Box overflow="hidden" w="100vw" h="100vh" bg={props.bgColour}>
             <img
-                src={breakpoints.sm
+                src={props.smallDevice
                 ? props.mobileImage
                 : props.desktopImage}
                 className="video-thumb tiny"
@@ -30,7 +28,7 @@ const ProgressiveVideo = (props) => {
             }}/>
             <video autoPlay playsInline muted loop>
                 <source
-                    src={breakpoints.sm
+                    src={props.smallDevice
                     ? props.mobileVideo
                     : props.desktopVideo}
                     type="video/mp4"

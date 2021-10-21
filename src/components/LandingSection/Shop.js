@@ -3,7 +3,7 @@ import {graphql, useStaticQuery} from 'gatsby';
 import {getImage} from 'gatsby-plugin-image';
 import LandingSection from "./LandingSection";
 
-const Shop = () => {
+const Shop = (props) => {
     const {placeholderImage} = useStaticQuery(graphql `
     query {
       placeholderImage: file(name: {eq: "shop"}) {
@@ -23,7 +23,8 @@ const Shop = () => {
         staticImage={shopImage}
         header=""
         buttonColor="#FFFF"
-        buttonText="BETA SHOP"/>);
+        buttonText="BETA SHOP"
+        smallDevice={props.smallDevice}/>);
 };
 
 export default Shop
