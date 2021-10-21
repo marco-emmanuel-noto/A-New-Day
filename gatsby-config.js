@@ -3,7 +3,7 @@ module.exports = {
         siteUrl: "https://www.yourdomain.tld",
         title: "and"
     },
-    plugins: [
+    plugins: ["gatsby-plugin-breakpoints",
         "gatsby-plugin-image",
         "gatsby-plugin-sharp",
         "gatsby-transformer-sharp", {

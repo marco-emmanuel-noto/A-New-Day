@@ -1,6 +1,7 @@
 import React, {useState} from "react"
-import {useMediaQuery, Box} from "@chakra-ui/react"
+import {Box} from "@chakra-ui/react"
 import "./ProgressiveVideo.css";
+import { useBreakpoint } from "gatsby-plugin-breakpoints";
 
 
 const ProgressiveVideo = (props) => {
@@ -11,18 +12,13 @@ const ProgressiveVideo = (props) => {
         setIsVideoLoaded(true);
     };
 
-    const [isPhone] = useMediaQuery("(max-width: 480px)");
-    const [isTablet] = useMediaQuery("(min-width: 481px)", "(max-width: 768px)");
-    const [isLaptop] = useMediaQuery("(min-width: 769px)", "(max-width: 1024px)");
-    const [isDesktop] = useMediaQuery("(min-width: 1025px)", "(max-width: 1200px)");
-    const [isTv] = useMediaQuery("(min-width: 1201px)");
 
-    console.log(isPhone)
+    const breakpoints = useBreakpoint;
 
     return (
         <Box position="relative" overflow="hidden" w="100vw" h="100vh" bg={props.bgColour}>
             <img
-                src={isPhone
+                src={breakpoints.sm
                 ? props.mobileImage
                 : props.desktopImage}
                 className="video-thumb tiny"
@@ -33,7 +29,7 @@ const ProgressiveVideo = (props) => {
             }}/>
             <video autoPlay playsInline muted loop>
                 <source
-                    src={isPhone
+                    src={breakpoints.sm
                     ? props.mobileVideo
                     : props.desktopVideo}
                     type="video/mp4"

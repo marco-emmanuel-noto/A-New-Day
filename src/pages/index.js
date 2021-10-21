@@ -1,24 +1,17 @@
 import React, {useState, useEffect} from "react"
 import {StaticImage} from "gatsby-plugin-image"
-import ProgressiveVideo from "../components/ProgressiveVideo"
+import ProgressiveVideo from "../components/ProgressiveVideo/ProgressiveVideo"
 import HeroDesktopVideo from "../assets/progVideo/HeroDesktopVideo.mp4"
 import LightHeroDesktop from "../assets/progVideo/LightHeroDesktop.jpg"
 import HeroMobileVideo from "../assets/progVideo/HeroMobileVideo.mp4"
 import LightHeroMobile from "../assets/progVideo/LightHeroMobile.jpg"
 import {Box, Heading, VStack} from "@chakra-ui/react"
 import "../components/index.css"
-import BridgeTest from "../components/ImageContainer/BridgeTest"
+import Showoff from "../components/ImageContainer/Showoff"
 
 const IndexPage = () => {
     const header = "A new day"
     const subHeader = "A Berlin based creative studio with a thing for brand design";
-
-    // useEffect(() => {     window.addEventListener("scroll", () => {         const
-    // currentScroll = window.scrollY;         let opacity;         if
-    // (currentScroll <= checkpoint) {             opacity = 1 - currentScroll /
-    // checkpoint;         } else {             opacity = 0;         } document
-    // .querySelector(".video-container")             .style .opacity = opacity; })
-    // })
 
     useEffect(() => {
         const windowHeight = window.screen.height;
@@ -71,7 +64,7 @@ const IndexPage = () => {
 
                 </VStack>
 
-                <Box position="relative"><BridgeTest/></Box>
+                <Showoff />
             </VStack>
 
         </Box>
