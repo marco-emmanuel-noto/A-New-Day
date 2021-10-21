@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react"
-import {StaticImage} from "gatsby-plugin-image"
 import ProgressiveVideo from "../components/ProgressiveVideo/ProgressiveVideo"
 import HeroDesktopVideo from "../assets/progVideo/HeroDesktopVideo.mp4"
 import LightHeroDesktop from "../assets/progVideo/LightHeroDesktop.jpg"
@@ -8,6 +7,7 @@ import LightHeroMobile from "../assets/progVideo/LightHeroMobile.jpg"
 import {Box, Heading, VStack} from "@chakra-ui/react"
 import "../components/index.css"
 import Showoff from "../components/ImageContainer/Showoff"
+import Header from "../components/UI/Typography/Header"
 
 const IndexPage = () => {
     const header = "A new day"
@@ -32,7 +32,7 @@ const IndexPage = () => {
     })
 
     return (
-        <Box>
+        <Box bg="#0F0D0F">
             <Box bg="#0F0D0F" position="fixed" top="0" left="0">
                 <Box className="video-container"><ProgressiveVideo
                     mobileVideo={HeroMobileVideo}
@@ -58,13 +58,23 @@ const IndexPage = () => {
                         className="exp-gradient"
                         justifyContent="center"
                         alignItems="center">
-                        <h1 id="test" className="main-header">{header.toUpperCase()}</h1>
-                        <h2 className="secondary-header">{subHeader.toUpperCase()}</h2>
+
+                        <Header
+                            children={header.toUpperCase()}
+                            as="h1"
+                            size="260px"
+                            textAlign="center"/>
+                        <Header
+                            children={subHeader.toUpperCase()}
+                            as="h2"
+                            size="120px"
+                            textAlign="center"/>
+
                     </VStack>
 
                 </VStack>
 
-                <Showoff />
+                <Showoff/>
             </VStack>
 
         </Box>

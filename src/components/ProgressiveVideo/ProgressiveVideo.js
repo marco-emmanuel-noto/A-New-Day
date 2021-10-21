@@ -13,7 +13,8 @@ const ProgressiveVideo = (props) => {
     };
 
 
-    const breakpoints = useBreakpoint;
+    const breakpoints = useBreakpoint();
+    console.log(breakpoints.sm)
 
     return (
         <Box position="relative" overflow="hidden" w="100vw" h="100vh" bg={props.bgColour}>
