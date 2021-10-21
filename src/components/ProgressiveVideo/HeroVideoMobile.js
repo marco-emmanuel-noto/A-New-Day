@@ -1,8 +1,8 @@
 import React from "react"
-import ProgressiveVideo from "../components/ProgressiveVideo/ProgressiveVideo"
+import ProgressiveVideo from "../../components/ProgressiveVideo/ProgressiveVideo"
 
-import HeroMobileVideo from "../assets/progVideo/HeroMobileVideo.mp4"
-import LightHeroMobile from "../assets/progVideo/LightHeroMobile.jpg"
+import HeroMobileVideo from "../../assets/progVideo/HeroMobileVideo.mp4"
+import LightHeroMobile from "../../assets/progVideo/LightHeroMobile.jpg"
 
 const HeroVideoMobile = () => {
 
