@@ -38,13 +38,13 @@ const IndexPage = () => {
     return (
         <Box bg="#0F0F0F">
             <Box bg="#0F0F0F" position="fixed" top="0" left="0">
-                <Box className="video-container"><ProgressiveVideo
-                    mobileVideo={HeroMobileVideo}
-                    desktopVideo={HeroDesktopVideo}
-                    mobileImage={LightHeroMobile}
-                    desktopImage={LightHeroDesktop}
-                    bgColour={"#0F0F0F"}
-                    smallDevice={breakpoints.sm}/></Box>
+                <Box className="video-container">
+
+                    {breakpoints.sm
+                        ? (<ProgressiveVideo image={LightHeroMobile} video={HeroMobileVideo}/>)
+                        : (<ProgressiveVideo image={LightHeroDesktop} video={HeroDesktopVideo}/>)}
+
+                </Box>
             </Box>
             <VStack
                 w="100vw"

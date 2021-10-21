@@ -15,11 +15,10 @@ const ProgressiveVideo = (props) => {
 
 
     return (
+        
         <Box overflow="hidden" w="100vw" h="100vh" bg={props.bgColour}>
             <img
-                src={props.smallDevice
-                ? props.mobileImage
-                : props.desktopImage}
+                src={props.image}
                 className="video-thumb tiny"
                 style={{
                 opacity: isVideoLoaded
@@ -28,9 +27,7 @@ const ProgressiveVideo = (props) => {
             }}/>
             <video autoPlay playsInline muted loop>
                 <source
-                    src={props.smallDevice
-                    ? props.mobileVideo
-                    : props.desktopVideo}
+                    src={props.video}
                     type="video/mp4"
                     onLoadedData={handleVideoLoaded}
                     style={{
