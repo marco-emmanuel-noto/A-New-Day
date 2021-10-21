@@ -4,14 +4,15 @@ import HeroDesktopVideo from "../assets/progVideo/HeroDesktopVideo.mp4"
 import LightHeroDesktop from "../assets/progVideo/LightHeroDesktop.jpg"
 import HeroMobileVideo from "../assets/progVideo/HeroMobileVideo.mp4"
 import LightHeroMobile from "../assets/progVideo/LightHeroMobile.jpg"
-import {Box, Heading, VStack} from "@chakra-ui/react"
-import "../components/index.css"
-import Showoff from "../components/ImageContainer/Showoff"
+import {Box, VStack} from "@chakra-ui/react"
+import Showoff from "../components/LandingSection/Showoff"
 import Header from "../components/UI/Typography/Header"
+import Shop from "../components/LandingSection/Shop"
+import GifClip from "../components/GifClip/GifClip"
+import About from "../components/LandingSection/About"
+import MainHeader from "../components/LandingSection/MainHeader"
 
 const IndexPage = () => {
-    const header = "A new day"
-    const subHeader = "A Berlin based creative studio with a thing for brand design";
 
     useEffect(() => {
         const windowHeight = window.screen.height;
@@ -49,30 +50,11 @@ const IndexPage = () => {
                 top="calc(100vh - 260px)"
                 spacing="0">
 
-                <VStack background="linear-gradient(180deg, rgba(0,0,0,0) 0%, #0F0F0F  40%)" pb="15rem">
-                    <VStack
-                        zIndex="999"
-                        bgClip="text"
-                        className="exp-gradient"
-                        justifyContent="center"
-                        alignItems="center">
-
-                        <Header
-                            children={header.toUpperCase()}
-                            as="h1"
-                            size="260px"
-                            textAlign="center"/>
-                        <Header
-                            children={subHeader.toUpperCase()}
-                            as="h2"
-                            size="120px"
-                            textAlign="center"/>
-
-                    </VStack>
-
-                </VStack>
+               <MainHeader />
 
                 <Showoff/>
+                <About />
+                <Shop/>
             </VStack>
 
         </Box>
