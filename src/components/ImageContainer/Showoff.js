@@ -8,25 +8,25 @@ import Header from "../UI/Typography/Header";
 
 const Showoff = () => {
     const {placeholderImage} = useStaticQuery(graphql `
-      query {
-        placeholderImage: allFile(filter: {dir: {eq: "/Users/marco/and/src/assets/landingSections"}}) {
-          edges {
-            node {
-              childImageSharp {
-                gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-              }
-            }
-          }
+    query {
+      placeholderImage: file(name: {eq: "showoff"}) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 200
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
+    }
     `);
-    const showoffImage = getImage(placeholderImage.edges[1].node);
-    const shopImage = getImage(placeholderImage.edges[0].node);
+    const showoffImage = getImage(placeholderImage);
+    
     
 
     return (
 
-        <Box>
+        
 
             <BgImage image={showoffImage} style={{minWidth:"100vw"}}>
                 <Flex
@@ -45,7 +45,7 @@ const Showoff = () => {
 
             
 
-        </Box>
+        
 
     );
 };
