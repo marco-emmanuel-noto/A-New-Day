@@ -1,17 +1,12 @@
-import React, {useState, useEffect} from "react"
-import ProgressiveVideo from "../components/ProgressiveVideo/ProgressiveVideo"
-import HeroDesktopVideo from "../assets/progVideo/HeroDesktopVideo.mp4"
-import LightHeroDesktop from "../assets/progVideo/LightHeroDesktop.jpg"
-import HeroMobileVideo from "../assets/progVideo/HeroMobileVideo.mp4"
-import LightHeroMobile from "../assets/progVideo/LightHeroMobile.jpg"
+import React, {useEffect} from "react"
 import {Box, VStack} from "@chakra-ui/react"
 import Showoff from "../components/LandingSection/Showoff"
-import Header from "../components/UI/Typography/Header"
 import Shop from "../components/LandingSection/Shop"
-import GifClip from "../components/GifClip/GifClip"
 import About from "../components/LandingSection/About"
 import MainHeader from "../components/LandingSection/MainHeader"
 import {useBreakpoint} from "gatsby-plugin-breakpoints";
+import HeroVideoMobile from "../components/ProgressiveVideo/HeroVideoMobile"
+import HeroVideoDesktop from "../components/ProgressiveVideo/HeroVideoDesktop"
 
 const IndexPage = () => {
 
@@ -41,8 +36,8 @@ const IndexPage = () => {
                 <Box className="video-container">
 
                     {breakpoints.sm
-                        ? (<ProgressiveVideo image={LightHeroMobile} video={HeroMobileVideo}/>)
-                        : (<ProgressiveVideo image={LightHeroDesktop} video={HeroDesktopVideo}/>)}
+                        ? (<HeroVideoMobile/>)
+                        : (<HeroVideoDesktop/>)}
 
                 </Box>
             </Box>
