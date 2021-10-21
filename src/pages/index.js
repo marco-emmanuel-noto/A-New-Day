@@ -32,14 +32,14 @@ const IndexPage = () => {
     })
 
     return (
-        <Box bg="#0F0D0F">
-            <Box bg="#0F0D0F" position="fixed" top="0" left="0">
+        <Box bg="#0F0F0F">
+            <Box bg="#0F0F0F" position="fixed" top="0" left="0">
                 <Box className="video-container"><ProgressiveVideo
                     mobileVideo={HeroMobileVideo}
                     desktopVideo={HeroDesktopVideo}
                     mobileImage={LightHeroMobile}
                     desktopImage={LightHeroDesktop}
-                    bgColour={"#0F0D0F"}/></Box>
+                    bgColour={"#0F0F0F"}/></Box>
             </Box>
             <VStack
                 w="100vw"
@@ -49,9 +49,7 @@ const IndexPage = () => {
                 top="calc(100vh - 260px)"
                 spacing="0">
 
-                <VStack
-                    background="linear-gradient(180deg, rgba(0,0,0,0) 0%, #0F0D0F 40%)"
-                    pb="15rem">
+                <VStack background="linear-gradient(180deg, rgba(0,0,0,0) 0%, #0F0F0F  40%)" pb="15rem">
                     <VStack
                         zIndex="999"
                         bgClip="text"

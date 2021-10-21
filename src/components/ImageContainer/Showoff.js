@@ -22,14 +22,15 @@ const Showoff = () => {
     `);
     const showoffImage = getImage(placeholderImage.edges[1].node);
     const shopImage = getImage(placeholderImage.edges[0].node);
+    
 
     return (
 
         <Box>
 
-            <BgImage image={showoffImage}>
+            <BgImage image={showoffImage} style={{minWidth:"100vw"}}>
                 <Flex
-                    w="100%"
+                    w="100wv"
                     h="150vh"
                     direction="column"
                     justifyContent="center"
@@ -42,39 +43,7 @@ const Showoff = () => {
                 </Flex>
             </BgImage>
 
-            <Flex
-                w="100vw"
-                h="200vh"
-                direction="column"
-                justifyContent="center"
-                alignItems="center"
-                pt="15rem">
-                <VStack spacing="25rem">
-                    <Header
-                        as="h2"
-                        children="MAKING PEOPLE FALL IN LOVE."
-                        size="180px"
-                        color="#FFFFFF"
-                        lineHeight="1.2"/>
-                    <AndButton bg="#FFFFFF" text={"ABOUT A NEW DAY STUDIO"}/>
-                </VStack>
-
-            </Flex>
-
-            <BgImage image={shopImage}>
-                <Flex
-                    w="100%"
-                    h="150vh"
-                    direction="column"
-                    justifyContent="center"
-                    alignItems="center">
-                    <VStack spacing="2rem">
-                        <Header as="h2" children="SHOWOFF" size="140px" color="#0F0F0F"/>
-
-                        <AndButton bg="#F9D9D9" text={"HAVE A LOOK"}/>
-                    </VStack>
-                </Flex>
-            </BgImage>
+            
 
         </Box>
 
