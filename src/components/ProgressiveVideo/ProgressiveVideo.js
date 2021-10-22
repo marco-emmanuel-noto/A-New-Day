@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react"
 import {Box} from "@chakra-ui/react"
 import "./ProgressiveVideo.css";
+import ReactPlayer from 'react-player'
 
 const ProgressiveVideo = (props) => {
     const [isVideoLoaded,
@@ -10,20 +11,10 @@ const ProgressiveVideo = (props) => {
         setIsVideoLoaded(true);
     };
 
-    useEffect(() => {
-        const video = document.getElementsByClassName("progressive-video")
-        if (video[0].paused) {
-            video[0].play()
-        }
-    });
-
     return (
-
-        <div
-            dangerouslySetInnerHTML={{
-            __html: ` <video muted autoPlay playsInline loop className="progressive-video"> <source src=${props.video} type="video/mp4"/> </video>`
-        }}/>
-
+        <Box overflow="hidden" w="100vw" h="100vh" bg={props.bgColour}>
+            <ReactPlayer width="100%" height="auto" playing="true" url={props.video} muted loop="true" playsinline/>
+        </Box>
     )
 }
 
