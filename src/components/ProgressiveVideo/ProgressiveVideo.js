@@ -17,20 +17,16 @@ const ProgressiveVideo = (props) => {
 
     return (
 
-        <Box overflow="hidden" w="100vw" h="100vh" bg={props.bgColour}>
-            {/* <img
-                src={props.image}
-                className="video-thumb tiny"
-                style={{
-                opacity: isVideoLoaded
-                    ? 0
-                    : 1
-            }}/> */}
+        <div
+      dangerouslySetInnerHTML={{
+        __html: `
+        <video muted autoPlay playsInline loop className="progressive-video">
+                <source src=${props.video} type="video/mp4"/>
+            </video>`
+      }}
+    />
 
-            <video muted autoPlay playsInline loop className="progressive-video">
-                <source src={props.video} type="video/mp4"/>
-            </video>
-        </Box>
+
     )
 }
 
