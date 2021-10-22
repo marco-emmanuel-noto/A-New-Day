@@ -7,6 +7,8 @@ import MainHeader from "../components/LandingSection/MainHeader"
 import {useBreakpoint} from "gatsby-plugin-breakpoints";
 import HeroVideoMobile from "../components/ProgressiveVideo/HeroVideoMobile"
 import HeroVideoDesktop from "../components/ProgressiveVideo/HeroVideoDesktop"
+import AutoPlaySilentVideo from "../components/ProgressiveVideo/AutoPlaySilentVideo"
+import HeroMobileVideo from "../assets/progVideo/HeroMobileVideo.mp4"
 
 const IndexPage = () => {
 
@@ -16,10 +18,10 @@ const IndexPage = () => {
         <Box bg="#0F0F0F">
             <Box bg="#0F0F0F" position="fixed" top="0" left="0">
                 <Box>
-
-                    {breakpoints.sm
+                <AutoPlaySilentVideo video={HeroMobileVideo}/>
+                    {/* {breakpoints.sm
                         ? (<HeroVideoMobile/>)
-                        : (<HeroVideoDesktop/>)}
+                        : (<HeroVideoDesktop/>)} */}
 
                 </Box>
             </Box>
