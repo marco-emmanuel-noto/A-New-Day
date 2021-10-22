@@ -4,12 +4,8 @@ body {
 }
 
 .gradient-animation {
-    text-align: center;
-
     background: linear-gradient(-45deg, #eb967c, #dda0d8, #98c3d3, #aae7d9);
     background-size: 200% auto;
-
-    color: #000;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
