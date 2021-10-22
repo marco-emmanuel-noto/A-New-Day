@@ -1,7 +1,6 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import {Box} from "@chakra-ui/react"
 import "./ProgressiveVideo.css";
-
 
 const ProgressiveVideo = (props) => {
     const [isVideoLoaded,
@@ -11,11 +10,15 @@ const ProgressiveVideo = (props) => {
         setIsVideoLoaded(true);
     };
 
-
-
+    useEffect(() => {
+        const video = document.getElementsByClassName("progressive-video")
+        if(video[0].paused) {
+            handleVideoLoaded()
+        }
+    }); 
 
     return (
-        
+
         <Box overflow="hidden" w="100vw" h="100vh" bg={props.bgColour}>
             <img
                 src={props.image}
