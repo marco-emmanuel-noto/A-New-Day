@@ -12,7 +12,9 @@ const Header = (props) => {
         textAlign={props.textAlign || "center"}
         lineHeight={props.lineHeight || 1}
         color={props.color}
-        letterSpacing={props.letterSpacing || "-2px"}/>)
+        letterSpacing={props.letterSpacing || "-2px"}
+        className={props.className}
+        />)
 }
 
 export default Header

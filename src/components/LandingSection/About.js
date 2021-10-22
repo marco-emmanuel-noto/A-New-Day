@@ -12,7 +12,8 @@ const About = (props) => {
             direction="column"
             justifyContent="center"
             alignItems="center"
-            pt="15rem">
+            pt="15rem"
+            bg="#0F0F0F">
             <VStack spacing="25rem" pb="15rem">
                 <Header
                     as="h2"

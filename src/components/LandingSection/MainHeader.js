@@ -1,7 +1,7 @@
 import React from "react"
 import {VStack, Box} from "@chakra-ui/react"
 import Header from "../UI/Typography/Header";
-import GifClip from "../GifClip/GifClip";
+
 
 const MainHeader = (props) => {
     const header = "A new day"
@@ -14,16 +14,16 @@ const MainHeader = (props) => {
 
             <VStack zIndex="999" justifyContent="center" alignItems="center">
 
-                <GifClip>
+                <Header
+                    children={header.toUpperCase()}
+                    as="h1"
+                    size={props.smallDevice
+                    ? "70px"
+                    : "260px"}
+                    textAlign="center"
+                    className="gradient-animation"
+                    />
 
-                    <Header
-                        children={header.toUpperCase()}
-                        as="h1"
-                        size={props.smallDevice
-                        ? "70px"
-                        : "260px"}
-                        textAlign="center"/>
-                </GifClip>
                 <Box
                     w={props.smallDevice
                     ? "60%"

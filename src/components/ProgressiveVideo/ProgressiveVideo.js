@@ -25,7 +25,7 @@ const ProgressiveVideo = (props) => {
                     ? 0
                     : 1
             }}/>
-            <video autoPlay playsInline muted loop>
+            <video autoPlay playsInline muted loop className="progressive-video">
                 <source
                     src={props.video}
                     type="video/mp4"

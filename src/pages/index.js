@@ -12,28 +12,10 @@ const IndexPage = () => {
 
     const breakpoints = useBreakpoint();
 
-    useEffect(() => {
-        const windowHeight = window.screen.height;
-        const checkpoint = windowHeight;
-        window.addEventListener("scroll", () => {
-            const currentScroll = window.scrollY;
-            let opacity;
-            if (currentScroll > checkpoint) {
-                opacity = 0
-            } else {
-                opacity = 1;
-            }
-            document
-                .querySelector(".video-container")
-                .style
-                .opacity = opacity;
-        })
-    })
-
     return (
         <Box bg="#0F0F0F">
             <Box bg="#0F0F0F" position="fixed" top="0" left="0">
-                <Box className="video-container">
+                <Box>
 
                     {breakpoints.sm
                         ? (<HeroVideoMobile/>)
