@@ -13,10 +13,11 @@ const ProgressiveVideo = (props) => {
     useEffect(() => {
         const video = document.getElementsByClassName("progressive-video")
         console.log(video)
-        if(video[0].paused) {
+        if (video[0].paused) {
             handleVideoLoaded()
+            video.play()
         }
-    }); 
+    });
 
     return (
 
@@ -29,7 +30,23 @@ const ProgressiveVideo = (props) => {
                     ? 0
                     : 1
             }}/>
-            <video muted autoPlay playsInline loop className="progressive-video">
+
+            <div
+                dangerouslySetInnerHTML={{
+                __html: ` <video muted autoPlay playsInline loop className=${progressive-video}>
+                <source
+                    src=${props.video}
+                    type="video/mp4"
+                    onLoadedData=${handleVideoLoaded}
+                    style={{
+                    opacity: isVideoLoaded
+                        ? 1
+                        : 0
+                }}/>
+            </video>, `
+            }}></div>
+
+            {/* <video muted autoPlay playsInline loop className="progressive-video">
                 <source
                     src={props.video}
                     type="video/mp4"
@@ -39,7 +56,7 @@ const ProgressiveVideo = (props) => {
                         ? 1
                         : 0
                 }}/>
-            </video>
+            </video> */}
         </Box>
     )
 }
