@@ -12,6 +12,7 @@ const ProgressiveVideo = (props) => {
 
     useEffect(() => {
         const video = document.getElementsByClassName("progressive-video")
+        console.log(video)
         if(video[0].paused) {
             handleVideoLoaded()
         }
