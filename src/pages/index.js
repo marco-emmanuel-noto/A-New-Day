@@ -1,5 +1,5 @@
 import React, {useEffect} from "react"
-import {Box, VStack} from "@chakra-ui/react"
+import {Box, VStack, Button} from "@chakra-ui/react"
 import Showoff from "../components/LandingSection/Showoff"
 import Shop from "../components/LandingSection/Shop"
 import About from "../components/LandingSection/About"
@@ -9,14 +9,16 @@ import HeroVideoMobile from "../components/ProgressiveVideo/HeroVideoMobile"
 import HeroVideoDesktop from "../components/ProgressiveVideo/HeroVideoDesktop"
 import AutoPlaySilentVideo from "../components/ProgressiveVideo/AutoPlaySilentVideo"
 import HeroMobileVideo from "../assets/progVideo/HeroMobileVideo.mp4"
+import Component from "../components/Component"
 
 const IndexPage = () => {
 
     const breakpoints = useBreakpoint();
+    
 
     return (
-        <Box bg="#0F0F0F">
-            <Box bg="#0F0F0F" position="fixed" top="0" left="0">
+        <Box>
+            <Box  position="fixed" top="4rem" left="0">
                 <Box>
 
                     {breakpoints.sm
@@ -34,6 +36,7 @@ const IndexPage = () => {
                 spacing="0">
 
                 <MainHeader smallDevice={breakpoints.sm}/>
+                {/* <Button onClick={location.state.handleDarkMode}>try</Button> */}
 
                 <Showoff smallDevice={breakpoints.sm}/>
                 <About smallDevice={breakpoints.sm}/>

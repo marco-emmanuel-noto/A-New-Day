@@ -8,6 +8,7 @@ import Header from "../UI/Typography/Header";
 const LandingSection = (props) => {
 
     return (
+
         <BgImage
             image={props.staticImage}
             style={{
@@ -32,6 +33,7 @@ const LandingSection = (props) => {
                 </VStack>
             </Flex>
         </BgImage>
+
     );
 };
 
