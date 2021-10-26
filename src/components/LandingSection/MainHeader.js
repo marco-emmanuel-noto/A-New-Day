@@ -17,10 +17,10 @@ const MainHeader = (props) => {
                 <Header
                     children={header.toUpperCase()}
                     as="h1"
-                    size="260px"
-                    // size={props.smallDevice
-                    // ? "70px"
-                    // : "260px"}
+                    // size="260px"
+                    size={props.smallDevice
+                    ? "70px"
+                    : "260px"}
                     textAlign="center"
                     className="gradient-animation"
                     />
@@ -32,10 +32,10 @@ const MainHeader = (props) => {
                     <Header
                         children={subHeader.toUpperCase()}
                         as="h2"
-                        // size={props.smallDevice
-                        // ? "18px"
-                        // : "120px"}
-                        size="120px"
+                        size={props.smallDevice
+                        ? "18px"
+                        : "120px"}
+                        // size="120px"
                         textAlign="center"
                         color="#FFFF"
                         lineHeight="1.2"
