@@ -22,6 +22,8 @@ body {
     
 
 }
+
+
 @keyframes ga {
     0% {
         background-position: 0 50%;
@@ -33,3 +35,23 @@ body {
         background-position: 0 50%;
     }
 }
+
+/* @media screen and (min-width: 480px) {
+    .hero-header {
+      font-size: 260px;
+    }
+
+    .hero-sub-header {
+        font-size: 120px;
+      }
+  }
+
+  @media screen and (max-width: 479px) {
+    .hero-header {
+      font-size: 70px;
+    }
+
+    .hero-sub-header {
+        font-size: 18px;
+      }
+  } */

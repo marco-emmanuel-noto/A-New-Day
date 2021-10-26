@@ -32,7 +32,9 @@ const IndexPage = () => {
                 top="calc(100vh - 260px)"
                 spacing="0">
 
-                <MainHeader smallDevice={breakpoints.sm}/> {/* <Button onClick={location.state.handleDarkMode}>try</Button> */}
+                {breakpoints.sm
+                    ? <MainHeader headerSize="70px" subHeaderSize="18px" subHeaderWidth="60%"/>
+                    : <MainHeader headerSize="260px" subHeaderSize="120px" subHeaderWidth="90%"/>}
 
                 <Showoff smallDevice={breakpoints.sm}/>
                 <About smallDevice={breakpoints.sm}/>
