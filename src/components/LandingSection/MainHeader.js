@@ -17,12 +17,10 @@ const MainHeader = (props) => {
                     children={header.toUpperCase()}
                     as="h1"
                     textAlign="center"
-                    className="gradient-animation"
-                    size={props.headerSize}
-                    />
+                    className="gradient-animation hero-header"/>
 
                 <Box
-                    w={props.subHeaderWidth}>
+                    className="sub-header-box">
                     <Header
                         children={subHeader.toUpperCase()}
                         as="h2"
@@ -30,8 +28,7 @@ const MainHeader = (props) => {
                         color="#FFFF"
                         lineHeight="1.2"
                         letterSpacing="0"
-                        size={props.subHeaderSize}
-                        />
+                        className="hero-sub-header"/>
                 </Box>
 
             </VStack>

@@ -19,11 +19,8 @@ body {
     height: 100%;
     position: absolute;
     z-index: 0;
-    
 
 }
-
-
 @keyframes ga {
     0% {
         background-position: 0 50%;
@@ -36,22 +33,29 @@ body {
     }
 }
 
-/* @media screen and (min-width: 480px) {
+.sub-header-box {
+    width: 60%;
+}
+
+.hero-header {
+    font-size: 70px !important;
+
+}
+
+.hero-sub-header {
+    font-size: 18px !important;
+
+}
+@media screen and (min-width: 480px) {
     .hero-header {
-      font-size: 260px;
+        font-size: 260px !important;
     }
 
     .hero-sub-header {
-        font-size: 120px;
-      }
-  }
-
-  @media screen and (max-width: 479px) {
-    .hero-header {
-      font-size: 70px;
+        font-size: 120px !important;
     }
 
-    .hero-sub-header {
-        font-size: 18px;
-      }
-  } */
+    .sub-header-box {
+        width: 90%;
+    }
+}
