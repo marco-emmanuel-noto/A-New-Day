@@ -1,7 +1,6 @@
 import React from "react"
 import AutoPlaySilentVideo from "../ProgressiveVideo/AutoPlaySilentVideo";
 import {Flex, VStack} from "@chakra-ui/react"
-import {FaSoundcloud} from 'react-icons/fa';
 
 const CardGradient = (props) => {
     return (

@@ -1,5 +1,5 @@
-import React, {useEffect} from "react"
-import {Box, VStack, Button} from "@chakra-ui/react"
+import React from "react"
+import {Box, VStack} from "@chakra-ui/react"
 import Showoff from "../components/LandingSection/Showoff"
 import Shop from "../components/LandingSection/Shop"
 import About from "../components/LandingSection/About"
@@ -7,9 +7,6 @@ import MainHeader from "../components/LandingSection/MainHeader"
 import {useBreakpoint} from "gatsby-plugin-breakpoints";
 import HeroVideoMobile from "../components/ProgressiveVideo/HeroVideoMobile"
 import HeroVideoDesktop from "../components/ProgressiveVideo/HeroVideoDesktop"
-import AutoPlaySilentVideo from "../components/ProgressiveVideo/AutoPlaySilentVideo"
-import HeroMobileVideo from "../assets/progVideo/HeroMobileVideo.mp4"
-import Component from "../components/Component"
 import RadioSection from "../components/LandingSection/RadioSection"
 
 const IndexPage = () => {

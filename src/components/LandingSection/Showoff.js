@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react"
+import React, {useContext, useEffect} from "react"
 import {graphql, useStaticQuery} from 'gatsby';
 import {getImage} from 'gatsby-plugin-image';
 import LandingSection from "./LandingSection";

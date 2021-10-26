@@ -1,5 +1,5 @@
-import React, {useState, useContext} from "react";
-import {Flex, Text, HStack, Button} from "@chakra-ui/react";
+import React, { useContext} from "react";
+import {HStack} from "@chakra-ui/react";
 import {Link} from "gatsby"
 import MenuColorContext from "../../../context/MenuColorContext";
 
