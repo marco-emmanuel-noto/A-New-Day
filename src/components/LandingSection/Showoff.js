@@ -13,7 +13,7 @@ const Showoff = (props) => {
         childImageSharp {
           gatsbyImageData(
             width: 2000
-            placeholder: BLURRED
+            placeholder: TRACED_SVG
             formats: [AUTO, WEBP, AVIF]
           )
         }

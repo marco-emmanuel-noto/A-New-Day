@@ -16,6 +16,8 @@ const ProgressiveVideo = (props) => {
             <Box
                 
                 className="video-thumb"
+                position="absolute"
+                
                 bg="#0F0D0F"
                 style={{
                 opacity: isVideoLoaded
