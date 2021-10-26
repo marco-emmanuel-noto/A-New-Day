@@ -14,8 +14,7 @@ const AndButton = (props) => {
             border="none"
             color="black"
             _focus={{
-        outline: "none"
-
+            outline: "none"
         }}>
             {props.text}
         </Box>
