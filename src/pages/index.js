@@ -10,15 +10,15 @@ import HeroVideoDesktop from "../components/ProgressiveVideo/HeroVideoDesktop"
 import AutoPlaySilentVideo from "../components/ProgressiveVideo/AutoPlaySilentVideo"
 import HeroMobileVideo from "../assets/progVideo/HeroMobileVideo.mp4"
 import Component from "../components/Component"
+import RadioSection from "../components/LandingSection/RadioSection"
 
 const IndexPage = () => {
 
     const breakpoints = useBreakpoint();
-    
 
     return (
         <Box>
-            <Box  position="fixed" top="4rem" left="0">
+            <Box position="fixed" top="4rem" left="0">
                 <Box>
 
                     {breakpoints.sm
@@ -35,12 +35,12 @@ const IndexPage = () => {
                 top="calc(100vh - 260px)"
                 spacing="0">
 
-                <MainHeader smallDevice={breakpoints.sm}/>
-                {/* <Button onClick={location.state.handleDarkMode}>try</Button> */}
+                <MainHeader smallDevice={breakpoints.sm}/> {/* <Button onClick={location.state.handleDarkMode}>try</Button> */}
 
                 <Showoff smallDevice={breakpoints.sm}/>
                 <About smallDevice={breakpoints.sm}/>
                 <Shop smallDevice={breakpoints.sm}/>
+                <RadioSection smallDevice={breakpoints.sm}/>
             </VStack>
 
         </Box>

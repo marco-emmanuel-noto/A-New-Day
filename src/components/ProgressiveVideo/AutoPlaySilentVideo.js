@@ -13,7 +13,11 @@ export default function AutoPlaySilentVideo(props) {
             autoPlay
             muted
             playsInline>
-            <source src={props.video} onLoadedData={props.handleVideoLoaded} style={props.style} type="video/mp4"/>
+            <source
+                src={props.video}
+                onLoadedData={props.handleVideoLoaded ? props.handleVideoLoaded  : ""}
+                style={props.style}
+                type="video/mp4"/>
         </video>
     );
 }

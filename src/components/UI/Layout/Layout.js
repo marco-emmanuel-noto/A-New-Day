@@ -6,7 +6,7 @@ import ColorStore from "../../../context/ColorStore";
 const Layout = ({children}) => (
     <ColorStore>
 
-        <Flex direction="column" justifyContent="center" alignItems="center">
+        <Flex direction="column" justifyContent="center" alignItems="center" bg="#0F0D0F">
             <Flex
                 w="15rem"
                 h="10%"
