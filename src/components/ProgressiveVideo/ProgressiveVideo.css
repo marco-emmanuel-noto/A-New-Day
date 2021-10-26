@@ -15,8 +15,3 @@
     transition: opacity 400ms ease 0;
 
 }
-.tiny {
-    filter: blur(20px);
-    /* transform: scale(1.1); */
-    transition: visibility 0 ease 400ms;
-}

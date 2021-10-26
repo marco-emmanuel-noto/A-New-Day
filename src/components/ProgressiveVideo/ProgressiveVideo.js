@@ -13,9 +13,10 @@ const ProgressiveVideo = (props) => {
 
     return (
         <Box overflow="hidden" w="100vw" h="100vh" bg={props.bgColour}>
-            <img
-                src={props.image}
-                className="video-thumb tiny"
+            <Box
+                
+                className="video-thumb"
+                bg="#0F0D0F"
                 style={{
                 opacity: isVideoLoaded
                     ? 0
