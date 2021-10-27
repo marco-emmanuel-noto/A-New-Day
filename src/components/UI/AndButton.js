@@ -7,7 +7,7 @@ const AndButton = (props) => {
             as="button"
             padding="25px 50px"
             borderRadius="45px"
-            fontFamily="Oswald, sans serif !important"
+            fontFamily="Oswald, Sans-Serif !important"
             fontSize="18px"
             fontWeight="400"
             bg={props.bg}
