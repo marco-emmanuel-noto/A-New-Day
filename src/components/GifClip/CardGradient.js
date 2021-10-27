@@ -11,7 +11,8 @@ const CardGradient = (props) => {
             overflow="hidden"
             position="relative"
             justifyContent="center"
-            alignItems="center">
+            alignItems="center"
+            zIndex="0">
             <AutoPlaySilentVideo video={props.video} className="video-stretch"/>
             <VStack
                 spacing={props.spacing}
