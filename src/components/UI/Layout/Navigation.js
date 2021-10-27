@@ -13,7 +13,7 @@ const Navigation = (props) => {
             spacing="1rem"
             as="nav"
             fontSize="14px"
-            fontFamily="Oswald-Regular, sans serif !important"
+            fontFamily="Oswald, sans serif !important"
             color={isLit
             ? "white"
             : "black"}>

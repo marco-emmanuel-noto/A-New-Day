@@ -1,9 +1,9 @@
-@import "../css/typography.css";
+
 
 body {
     background-color: #0F0D0F;
     overflow-x: hidden;
-    font-family: "Oswald-Regular", sans-serif !important;
+    font-family: "Oswald", sans-serif !important;
 }
 
 .gradient-animation {
