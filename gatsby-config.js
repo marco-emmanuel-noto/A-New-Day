@@ -1,7 +1,8 @@
 module.exports = {
     siteMetadata: {
         siteUrl: "https://anewdaymain.gatsbyjs.io/",
-        title: "A New Day Studio"
+        title: "A New Day Studio",
+        description: "Brand Design – Berlin × Budapest"
     },
     plugins: ["gatsby-plugin-breakpoints",
         "gatsby-plugin-image",

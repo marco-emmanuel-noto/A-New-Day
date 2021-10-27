@@ -5,7 +5,7 @@ const Header = (props) => {
     return (<Heading
         children={props.children}
         as={props.as}
-        fontFamily="Oswald, sans-serif !important"
+        fontFamily="Oswald-Regular, sans serif !important"
         fontSize={props.size}
         fontWeight="400"
         letterSpacing="-2px"
