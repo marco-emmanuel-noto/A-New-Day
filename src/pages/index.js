@@ -32,12 +32,13 @@ const IndexPage = () => {
                 top="calc(100vh - 260px)"
                 spacing="0">
 
-                <MainHeader/> 
+                <MainHeader/>
 
                 <Showoff smallDevice={breakpoints.sm}/>
                 <About smallDevice={breakpoints.sm}/>
                 <Shop smallDevice={breakpoints.sm}/>
                 <RadioSection smallDevice={breakpoints.sm}/>
+
             </VStack>
 
         </Box>
