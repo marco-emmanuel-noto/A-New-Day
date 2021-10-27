@@ -8,13 +8,16 @@ import {useBreakpoint} from "gatsby-plugin-breakpoints";
 import HeroVideoMobile from "../components/ProgressiveVideo/HeroVideoMobile"
 import HeroVideoDesktop from "../components/ProgressiveVideo/HeroVideoDesktop"
 import RadioSection from "../components/LandingSection/RadioSection"
+import Seo from "../components/Seo/Seo"
 
 const IndexPage = () => {
 
     const breakpoints = useBreakpoint();
 
     return (
+
         <Box>
+            <Seo/>
             <Box position="fixed" top="4rem" left="0">
                 <Box>
 
