@@ -2,11 +2,16 @@ import React from "react";
 import {Box, Flex} from "@chakra-ui/react";
 import Navigation from "./Navigation";
 import ColorStore from "../../../context/ColorStore";
+import Footer from "./Footer";
 
 const Layout = ({children}) => (
     <ColorStore>
 
-        <Flex direction="column" justifyContent="center" alignItems="center" bg="#0F0D0F">
+        <Flex
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            bg="#0F0D0F">
             <Flex
                 w="15rem"
                 h="10%"
@@ -20,6 +25,7 @@ const Layout = ({children}) => (
             </Flex>
 
             <Box as="main">{children}</Box>
+            <Box bg="#0F0F0F" as="footer" zIndex="99999"><Footer/></Box>
 
         </Flex>
     </ColorStore>

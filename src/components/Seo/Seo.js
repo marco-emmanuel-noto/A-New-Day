@@ -8,9 +8,9 @@ const Seo = ({description, lang, meta, title}) => {
       query {
         site {
           siteMetadata {
-            description
             siteUrl
             title
+            description
           }
         }
       }
@@ -19,6 +19,8 @@ const Seo = ({description, lang, meta, title}) => {
     const metaDescription = description || site.siteMetadata.description
     const defaultTitle = site.siteMetadata
         ?.title
+
+    console.log(site.title)
 
     return (<Helmet
         htmlAttributes={{

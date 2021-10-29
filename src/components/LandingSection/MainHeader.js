@@ -8,10 +8,11 @@ const MainHeader = (props) => {
 
     return (
         <VStack
-            background="linear-gradient(180deg, rgba(0,0,0,0) 0%, #0F0F0F  40%)"
+            background="linear-gradient(180deg, rgba(0,0,0,0) 40%, #0F0F0F  60%)"
             pb="15rem">
 
             <VStack zIndex="999" justifyContent="center" alignItems="center">
+                <Box w="100%" h="calc(100vh - 260px)"/>
 
                 <Header
                     children={header.toUpperCase()}
@@ -19,8 +20,7 @@ const MainHeader = (props) => {
                     textAlign="center"
                     className="gradient-animation hero-header"/>
 
-                <Box
-                    className="sub-header-box">
+                <Box className="sub-header-box">
                     <Header
                         children={subHeader.toUpperCase()}
                         as="h2"

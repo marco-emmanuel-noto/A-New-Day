@@ -1,11 +1,14 @@
-import React, { useContext} from "react";
-import {HStack} from "@chakra-ui/react";
+import React, {useContext} from "react";
+import {HStack, Box} from "@chakra-ui/react";
 import {Link} from "gatsby"
 import MenuColorContext from "../../../context/MenuColorContext";
 
 const Navigation = (props) => {
     const {isLit, onToggleLight} = useContext(MenuColorContext)
-    
+
+    const color = isLit
+        ? "white"
+        : "black"
 
     return (
         <HStack
@@ -14,17 +17,17 @@ const Navigation = (props) => {
             as="nav"
             fontSize="14px"
             fontFamily="Oswald, Sans-Serif !important"
-            color={isLit
-            ? "white"
-            : "black"}>
+            color={color}>
 
             <Link to="/">
                 SHOWOFF
             </Link>
 
-            <Link to="/de">
-                ANEWDAY
-            </Link>
+            <Box borderBottom={`2px solid ${color}`}>
+                <Link to="/de">
+                    ANEWDAY
+                </Link>
+            </Box>
 
             <Link to="/de">
                 CONTACT

@@ -10,6 +10,7 @@ import HeroVideoDesktop from "../components/ProgressiveVideo/HeroVideoDesktop"
 import RadioSection from "../components/LandingSection/RadioSection"
 import Seo from "../components/Seo/Seo"
 
+
 const IndexPage = () => {
 
     const breakpoints = useBreakpoint();
@@ -17,7 +18,6 @@ const IndexPage = () => {
     return (
 
         <Box>
-            <Seo/>
             <Box position="fixed" top="4rem" left="0">
                 <Box>
 
@@ -32,8 +32,8 @@ const IndexPage = () => {
                 justifyContent="center"
                 alignItems="center"
                 position="relative"
-                top="calc(100vh - 260px)"
                 spacing="0">
+                
 
                 <MainHeader/>
 
@@ -41,6 +41,7 @@ const IndexPage = () => {
                 <About smallDevice={breakpoints.sm}/>
                 <Shop smallDevice={breakpoints.sm}/>
                 <RadioSection smallDevice={breakpoints.sm}/>
+                
 
             </VStack>
 

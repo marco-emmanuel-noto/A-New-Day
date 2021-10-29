@@ -24,6 +24,7 @@ const About = (props) => {
                     color="#FFFFFF"
                     lineHeight="1.2"/>
                 <AndButton bg="#FFFFFF" text={"ABOUT A NEW DAY STUDIO"}/>
+                
             </VStack>
 
         </Flex>
