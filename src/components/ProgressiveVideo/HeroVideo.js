@@ -10,9 +10,9 @@ const HeroVideo = () => {
 
     return (
         <Box position="fixed" top="4rem" left="0">
-            {breakpoints.sm
-                ? <ProgressiveVideo video={HeroMobileVideo}/>
-                : <ProgressiveVideo video={HeroDesktopVideo}/>}
+            {breakpoints.sm && <ProgressiveVideo video={HeroMobileVideo}/>}
+            {!breakpoints.sm && <ProgressiveVideo video={HeroDesktopVideo}/>}
+
         </Box>
     )
 
