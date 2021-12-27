@@ -1,0 +1,4 @@
+.nav-link:hover {
+    border-bottom: 3px solid;
+    margin-bottom: -3px;
+}

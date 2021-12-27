@@ -27,7 +27,7 @@ const IndexPage = () => {
 
                 <MainHeader/>
 
-                <VStack bg="#0F0D0F">
+                <VStack bg="#0F0D0F" zIndex="1">
 
                     <Showoff smallDevice={breakpoints.sm}/>
                     <About smallDevice={breakpoints.sm}/>

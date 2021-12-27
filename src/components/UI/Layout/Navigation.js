@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import {HStack, Box} from "@chakra-ui/react";
 import {Link} from "gatsby"
 import MenuColorContext from "../../../context/MenuColorContext";
+import NavLink from "./NavLink";
 
 const Navigation = (props) => {
     const {isLit, onToggleLight} = useContext(MenuColorContext)
@@ -19,19 +20,11 @@ const Navigation = (props) => {
             fontFamily="Oswald, Sans-Serif !important"
             color={color}>
 
-            <Link to="/">
-                SHOWOFF
-            </Link>
+            <NavLink href="/showoff" children="SHOWOFF"/>
+            <NavLink href="/" children="ANEWDAY"/>
+            <NavLink href="/contact" children="CONTACT"/>
 
-            <Box borderBottom={`2px solid ${color}`}>
-                <Link to="/de">
-                    ANEWDAY
-                </Link>
-            </Box>
 
-            <Link to="/de">
-                CONTACT
-            </Link>
 
         </HStack>
 
