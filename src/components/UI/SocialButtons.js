@@ -15,7 +15,7 @@ const SocialButtons = () => {
             size: "1.5em"
         }}>
 
-            <Flex w="20%" justifyContent="space-between">
+            <Flex w="80vw" maxW="300px" justifyContent="space-between">
                 <a href="https://www.instagram.com/anewday_studio/"><BsInstagram/></a>
                 <a href="https://twitter.com/anewday_studio/"><BsTwitter/></a>
                 <a href="https://soundcloud.com/anewday_studio"><FaSoundcloud/></a>

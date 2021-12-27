@@ -24,7 +24,7 @@ const Footer = () => {
                 <Header
                     as="h3"
                     children="© 2021"
-                    size="18px"
+                    size="16px"
                     color="#FFFFFF"
                     lineHeight="1.2"
                     letterSpacing="0"/>

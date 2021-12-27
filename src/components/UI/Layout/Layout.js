@@ -13,9 +13,9 @@ const Layout = ({children}) => (
                 direction="column"
                 justifyContent="center"
                 alignItems="center"
-                bg="#0F0D0F">
+                bg="#0F0D0F"
+                w="100vw">
                 <Flex
-                    w="15rem"
                     h="10%"
                     position="fixed"
                     top="0"

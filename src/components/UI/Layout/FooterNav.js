@@ -9,9 +9,11 @@ const FooterNav = (props) => {
             flexWrap="nowrap"
             spacing="1rem"
             as="nav"
-            fontSize="14px"
+            fontSize="16px"
             fontFamily="Oswald, Sans-Serif !important"
-            color="white">
+            color="white"
+            pt="4rem"
+            pb="2rem">
 
             <Link to="/">
                 IMPRINT

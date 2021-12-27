@@ -6,7 +6,7 @@ import TrippyM from "../../assets/GifClip/TrippyM.mp4"
 const LogoClip = () => {
     return (
 
-        <Box >
+        <Box>
             <svg height="0" width="0">
                 <defs>
                     <clipPath id="and-logo" clipPathUnits="objectBoundingBox">

@@ -23,7 +23,8 @@ const IndexPage = () => {
                 justifyContent="center"
                 alignItems="center"
                 position="relative"
-                spacing="0">
+                spacing="0"
+                bg="#0F0D0F">
 
                 <MainHeader/>
 
