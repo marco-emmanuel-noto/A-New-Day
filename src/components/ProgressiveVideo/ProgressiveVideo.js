@@ -13,8 +13,7 @@ const ProgressiveVideo = (props) => {
     };
 
     const {isVisible, onToggleVisibility} = useContext(VideoContext)
-
-    console.log(isVisible)
+    
 
     
 

@@ -23,17 +23,18 @@ const IndexPage = () => {
                 justifyContent="center"
                 alignItems="center"
                 position="relative"
-                spacing="0"
-                bg="#0F0D0F">
+                spacing="0">
 
                 <MainHeader/>
 
-                <Showoff smallDevice={breakpoints.sm}/>
-                <About smallDevice={breakpoints.sm}/>
+                <VStack bg="#0F0D0F">
 
-                <Shop smallDevice={breakpoints.sm}/>
-                <RadioSection smallDevice={breakpoints.sm}/>
+                    <Showoff smallDevice={breakpoints.sm}/>
+                    <About smallDevice={breakpoints.sm}/>
 
+                    <Shop smallDevice={breakpoints.sm}/>
+                    <RadioSection smallDevice={breakpoints.sm}/>
+                </VStack>
             </VStack>
 
         </Box>
