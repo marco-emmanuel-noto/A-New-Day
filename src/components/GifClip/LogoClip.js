@@ -6,7 +6,7 @@ import TrippyM from "../../assets/GifClip/TrippyM.mp4"
 const LogoClip = () => {
     return (
 
-        <>
+        <Box >
             <svg height="0" width="0">
                 <defs>
                     <clipPath id="and-logo" clipPathUnits="objectBoundingBox">
@@ -17,7 +17,9 @@ const LogoClip = () => {
             </svg>
 
             <AutoPlaySilentVideo className="logo-clip-video-container" video={TrippyM}/>
-        </>
+
+            {/* <Box className="logo-gradient"/>  */}
+        </Box>
 
     )
 }

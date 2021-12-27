@@ -1,0 +1,69 @@
+.wrapper {
+
+    width: 100%;
+    height: 100vh;
+    background: #00040e;
+    position: relative;
+}
+
+.container {
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+}
+
+.svgpower {
+
+    width: 512px;
+    height: 512px;
+
+}
+.wrap-logo {
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    margin: 10% auto auto 45%;
+    clip-path: url("#clipping");
+    background: linear-gradient(120deg, #ec0089, #5844ff, #00b5d1, #d7d300, #d700c5);
+    background-size: 320% 150%;
+    -webkit-animation-direction: alternate-reverse;
+    -webkit-animation: AnimationName 6s ease infinite;
+    -moz-animation: AnimationName 6s ease infinite;
+    animation: AnimationName 6s ease infinite;
+
+}
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0 49%;
+    }
+    50% {
+        background-position: 100% 52%;
+    }
+    100% {
+        background-position: 0 49%;
+    }
+}
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0 49%;
+    }
+    50% {
+        background-position: 100% 52%;
+    }
+    100% {
+        background-position: 0 49%;
+    }
+}
+@keyframes AnimationName {
+    0% {
+        background-position: 0 49%;
+    }
+    50% {
+        background-position: 100% 52%;
+    }
+    100% {
+        background-position: 0 49%;
+    }
+}

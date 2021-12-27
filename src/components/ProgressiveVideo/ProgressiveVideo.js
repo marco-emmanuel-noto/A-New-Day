@@ -1,9 +1,8 @@
-import React, {useState, useContext} from "react"
+import React, {useContext} from "react"
 import {Box} from "@chakra-ui/react"
 import "./ProgressiveVideo.css";
 import AutoPlaySilentVideo from "./AutoPlaySilentVideo"
-import MenuColorContext from "../../context/MenuColorContext";
-
+import VideoContext from "../../context/VideoContext"
 
 const ProgressiveVideo = (props) => {
     const [isVideoLoaded,
@@ -13,12 +12,12 @@ const ProgressiveVideo = (props) => {
         setIsVideoLoaded(true);
     };
 
-    const {isLit, onToggleLight} = useContext(MenuColorContext)
+    const {isVisible, onToggleVisibility} = useContext(VideoContext)
 
     
 
     return (
-        <Box overflow="hidden" w="100vw" h="100vh" bg={props.bgColour} opacity={isLit? "1" : "0"}>
+        <Box overflow="hidden" w="100vw" h="100vh" bg={props.bgColour} opacity={isVisible? "1" : "0"}>
             <Box
                 
                 className="video-thumb"

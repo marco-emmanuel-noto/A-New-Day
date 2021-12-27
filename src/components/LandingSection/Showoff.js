@@ -29,7 +29,7 @@ const Showoff = (props) => {
         rootMargin: "-10% 0% -90% 0%"
 
     });
-
+    
     const {isLit, onToggleLight} = useContext(MenuColorContext)
 
     useEffect(() => {

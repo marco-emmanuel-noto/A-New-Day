@@ -1,5 +1,5 @@
 import React from "react"
-import {Flex, VStack} from "@chakra-ui/react"
+import {Flex, VStack, Box} from "@chakra-ui/react"
 import Header from "../Typography/Header";
 import LogoClip from "../../GifClip/LogoClip";
 import SocialButtons from "../SocialButtons";
@@ -19,7 +19,8 @@ const Footer = () => {
             >
 
             <VStack justifyContent="center" alignItems="center" spacing="8">
-                <LogoClip/>
+            <Box w="400px" h="400px" className="logo-animation"/>
+            <LogoClip />
                 <Header
                     as="h3"
                     children="© 2021"

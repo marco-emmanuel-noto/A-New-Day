@@ -15,7 +15,7 @@ const Navigation = (props) => {
             flexWrap="nowrap"
             spacing="1rem"
             as="nav"
-            fontSize="14px"
+            fontSize="18px"
             fontFamily="Oswald, Sans-Serif !important"
             color={color}>
 
