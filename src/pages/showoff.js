@@ -2,7 +2,7 @@ import React from "react"
 import {graphql} from "gatsby"
 import {GatsbyImage} from "gatsby-plugin-image"
 
-import {Box, VStack, Grid, GridItem} from "@chakra-ui/react"
+import {Flex, VStack, Grid, GridItem} from "@chakra-ui/react"
 import ShowoffVideo from "../components/ProgressiveVideo/ShowoffVideo"
 
 const ShowoffPage = ({data}) => {
@@ -16,11 +16,16 @@ const ShowoffPage = ({data}) => {
             <Grid templateColumns='repeat(2, 1fr)'>
                 {images.map((image, index) => {
                     return (
-                        <Box>
-                            <GridItem colSpan={2}>
-                                <GatsbyImage image={image.node.childImageSharp.gatsbyImageData}/>
-                            </GridItem>
-                        </Box>
+
+                        <GridItem
+                            gridColumn={index === 2 || index === 5
+                            ? "1 / 3"
+                            : "initial"}
+                            w={index === 2 && "100vw"}>
+                            <GatsbyImage image={image.node.childImageSharp.gatsbyImageData}/>
+
+                        </GridItem>
+
                     )
                 })}
             </Grid>
@@ -30,17 +35,17 @@ const ShowoffPage = ({data}) => {
 
 export const pageQuery = graphql `
 query MyQuery {
-    allFile(filter: {dir: {eq: "/Users/marco/and/src/assets/showoff"}}) {
-      edges {
-        node {
-          id
-          childImageSharp {
-            gatsbyImageData
-          }
+  allFile(filter: {dir: {eq: "/Users/marco/and/src/assets/showoff"}}) {
+    edges {
+      node {
+        id
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
   }
+}
   `
 
 export default ShowoffPage

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from "react"
+import React, {useContext, useEffect, useRef} from "react"
 import {graphql, useStaticQuery} from 'gatsby';
 import {getImage} from 'gatsby-plugin-image';
 import LandingSection from "./LandingSection";
@@ -32,8 +32,16 @@ const Showoff = (props) => {
     
     const {isLit, onToggleLight} = useContext(MenuColorContext)
 
+    const firstUpdate = useRef(true);
+
+
     useEffect(() => {
+      if (firstUpdate.current) {
+        firstUpdate.current = false;
+        return;
+      } else {
         onToggleLight()
+      }
     }, [inView])
 
     return (

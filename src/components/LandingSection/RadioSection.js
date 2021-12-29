@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from "react";
+import React, {useContext, useEffect, useRef} from "react";
 import {Flex, Box} from "@chakra-ui/react";
 import CardGradient from "../GifClip/CardGradient";
 import TrippyM from "../../assets/GifClip/TrippyM.mp4"
@@ -19,8 +19,16 @@ const RadioSection = (props) => {
 
     const {isLit, onToggleLight} = useContext(MenuColorContext)
 
+    const firstUpdate = useRef(true);
+
+
     useEffect(() => {
+      if (firstUpdate.current) {
+        firstUpdate.current = false;
+        return;
+      } else {
         onToggleLight()
+      }
     }, [inView])
 
     return (

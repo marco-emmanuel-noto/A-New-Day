@@ -27,14 +27,12 @@ const IndexPage = () => {
 
                 <MainHeader/>
 
-                <VStack bg="#0F0D0F" zIndex="1">
+                <Showoff smallDevice={breakpoints.sm}/>
+                <About smallDevice={breakpoints.sm}/>
 
-                    <Showoff smallDevice={breakpoints.sm}/>
-                    <About smallDevice={breakpoints.sm}/>
+                <Shop smallDevice={breakpoints.sm}/>
+                <RadioSection smallDevice={breakpoints.sm}/>
 
-                    <Shop smallDevice={breakpoints.sm}/>
-                    <RadioSection smallDevice={breakpoints.sm}/>
-                </VStack>
             </VStack>
 
         </Box>

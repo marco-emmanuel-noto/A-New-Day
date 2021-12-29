@@ -3,7 +3,7 @@ import MenuColorContext from './MenuColorContext'
 
 function ColorStore({children}) {
     const [isLit,
-        setLit] = useState(false)
+        setLit] = useState(true)
     const toggleLight = () => {
         setLit(!isLit)
     }
